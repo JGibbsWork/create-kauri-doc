@@ -1,0 +1,20 @@
+{
+  "name": "create-kauri-doc",
+  "bin": "./index.js",
+  "version": "0.0.1",
+  "description": "creates a kauri doc template",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickthorpe71/create-kauri-doc.git"
+  },
+  "author": "Nick Thorpe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickthorpe71/create-kauri-doc/issues"
+  },
+  "homepage": "https://github.com/nickthorpe71/create-kauri-doc#readme"
+}
