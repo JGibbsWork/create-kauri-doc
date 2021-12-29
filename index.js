@@ -59,11 +59,7 @@ const run = async () => {
   const docInfo = await userInteraction.askForDocInfo();
 
   // create doc
-  fs.writeFile(`./${fileName}`, docTemplate(docInfo), err => {
-    if (err)
-      console.log(chalk.red(err));
-    return;
-  });
+  files.createFile(fileName, docTemplate(docInfo));
 
   // display creation confirmation
   console.log(chalk.green('Doc Created!'));
