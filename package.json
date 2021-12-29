@@ -1,7 +1,7 @@
 {
   "name": "create-kauri-doc",
   "bin": "./index.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "creates a kauri doc template",
   "main": "index.js",
   "scripts": {
