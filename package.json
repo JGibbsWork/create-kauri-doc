@@ -1,20 +1,34 @@
 {
   "name": "create-kauri-doc",
   "bin": "./index.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "creates a kauri doc template",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "CLI",
+    "Kauri"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nickthorpe71/create-kauri-doc.git"
   },
+  "type": "module",
   "author": "Nick Thorpe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nickthorpe71/create-kauri-doc/issues"
   },
-  "homepage": "https://github.com/nickthorpe71/create-kauri-doc#readme"
+  "homepage": "https://github.com/nickthorpe71/create-kauri-doc#readme",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "clear": "^0.1.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.5",
+    "touch": "^3.1.0"
+  }
 }
