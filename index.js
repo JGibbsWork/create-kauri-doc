@@ -7,6 +7,7 @@ import fs from 'fs';
 
 import files from './lib/files.js';
 import userInteraction from './lib/user-interaction.js';
+import templates from './lib/templates.js';
 
 const displayTitle = () => {
   console.log(
@@ -16,24 +17,16 @@ const displayTitle = () => {
   );
 }
 
-const docTemplate = (userInput) =>
-  `---
-title: ${userInput.title}
-author: ${userInput.author}
-sidebar_label: ${userInput.sidebarLabel}
-tags:
-${userInput.tags.split(',').map(tag => "- " + tag.trim()).join('\n')}
----
-
-WRITE CONTENT HERE
-`;
-
 const run = async () => {
   // clear terminal window
   clear();
 
   // display title
   displayTitle();
+
+  // prompt user for which template to use
+  const templateRes = await userInteraction.askForTemplate();
+  const template = templateRes.template;
 
   // prompt user for file name
   const fileNameRes = await userInteraction.askFileName();
@@ -58,11 +51,13 @@ const run = async () => {
   // get doc info
   const docInfo = await userInteraction.askForDocInfo();
 
+  // check for different template options 
+
   // create doc
-  files.createFile(fileName, docTemplate(docInfo));
+  files.createFile(fileName, templates[template](docInfo));
 
   // display creation confirmation
-  console.log(chalk.green('Doc Created!'));
+  console.log(chalk.green('Kauri File Created!'));
 }
 
 run();
